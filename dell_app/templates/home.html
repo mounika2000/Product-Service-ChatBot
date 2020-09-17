@@ -1,0 +1,255 @@
+
+
+
+<!DOCTYPE html>
+
+<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> 
+<html>
+  <title>Order Status Bot</title>
+  <body>
+    <nav class="navbar navbar-dark bg-primary navbar-expand-lg ">
+      <a class="navbar-brand" href="#">
+        <img src="dell_logo.png" width="30" height="30" alt="">
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" >
+          <span class="navbar-toggler-icon"></span>
+      </button>
+          
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+              <li class="nav-item active">
+                  <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="#">Solutions</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="#">Products</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="#">Services</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="#">Contact Us</a>
+              </li>
+          </ul>
+          
+      </div>
+  </nav>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <center>
+      
+    </center>
+      
+  </body>
+</html>
+<head>
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="https://user-images.githubusercontent.com/20112458/49326597-773b7280-f57a-11e8-853d-20ed61d18b0d.png"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <style>
+      body {
+        font-family: monospace;
+      }
+      h1 {
+        background-color: black;
+        display: inline-block;
+        font-size: 3em;
+        margin: 0;
+        padding: 14px;
+	font-family: proxima nova;
+      }
+      h3 {
+        color: black;
+        font-size: 20px;
+        margin-top: 3px;
+        text-align: center;
+      }
+      #chatbox {
+        margin-left: auto;
+        margin-right: auto;
+        width: 70%;
+        margin-top: 30px;
+        border: 6px black;
+      }
+      #userInput {        
+	    margin-left: auto;
+      margin-right: auto;
+      width: 80%;
+      margin-top: 260px;
+      }
+      #textInput {
+      width: 70%;
+      background: #ffffff;
+      padding: 10px;
+      font-family: monospace;
+      font-size: 17px;
+      border-radius: 20px;
+           
+             }
+	#userText{
+	display: inline-block
+	}
+  .userText {
+		background: #0FB0DF;
+  color: white;
+	text-align: right;
+	display:table;
+	font-family: monospace;
+	font-size: 17px;
+  line-height: 30px;
+  border-radius: 15px;
+	}
+     
+ .userText span { 	     
+  padding: 10px;
+  border-radius: 15px;
+	display:inline-block;	
+
+  }
+  
+  .botText {	
+  background-color: #747e92;
+  color: white;
+	display:inline-block;
+  font-family: monospace;
+  font-size: 17px;
+  text-align: left;
+  line-height: 30px;
+	border-radius: 15px 		   
+	}
+  
+  .botText span {       
+	padding: 10px;
+  border-radius: 15px;
+	display: inline-block
+  }
+      #tidbit {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 300px;
+      }
+      .boxed {
+        margin-left: auto;
+        margin-right: auto;
+        width: 90%;
+        margin-top: 60px;
+      	border-radius: 15px
+        border-3px black;
+	
+      }
+      .box {
+        border: 2px solid black;
+      }
+      .dot {
+  height: 40px;
+  width: 40px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+}
+.chat_window {
+  position: absolute;
+  margin-top:10px;
+  width: calc(100% - 20px);
+  max-width: 800px;
+  height: 500px;
+  border-radius: 10px;
+  background-color: #fff;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  background-color: #f8f8f8;
+  overflow: scroll;
+}
+.top_menu {
+  background-color: #fff;
+  width: 100%;
+  padding: 20px 0 15px;
+  box-shadow: 0 1px 30px rgba(0, 0, 0, 0.1);
+}
+.top_menu .buttons {
+  margin: 3px 0 0 20px;
+  position: absolute;
+}
+.top_menu .buttons .button {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 10px;
+  position: relative;
+}
+.top_menu .buttons .button.close {
+  background-color: #f5886e;
+}
+.top_menu .buttons .button.minimize {
+  background-color: #fdbf68;
+}
+.top_menu .buttons .button.maximize {
+  background-color: #a3d063;
+}
+.top_menu .title {
+  text-align: center;
+  color: black;
+  font-size: 20px;
+}
+    </style>
+</head>
+
+<body>
+    
+<div class="chat_window" >
+    
+            <div class="top_menu">
+                    <div class="buttons">
+                        <div class="button close"></div>
+                    <div class="button minimize"></div>
+                    <div class="button maximize"></div></div>
+                    <div class="title">Dell Order Status Chat Bot</div></div>
+        <div id="chatbox">         
+                <p class="botText">	    
+            <span>Hi! how may I help you?</span>
+          </p>         
+        </div>
+        <center>
+                <div id="userInput">
+                          <input id="textInput" type="text" name="msg" placeholder="Enter your Message" />
+                       </div>
+         </center>
+</div>
+
+</body>
+
+<script>
+        function getBotResponse() {
+          var rawText = $("#textInput").val();
+          var userHtml = '<p class="userText"><span>' + rawText + "</span></p>";
+          $("#textInput").val("");
+          $("#chatbox").append(userHtml);
+          document
+            .getElementById("userInput")
+            .scrollIntoView({ block: "start", behavior: "smooth" });
+          $.get("/get", { msg: rawText }).done(function(data) {
+            var botHtml = '<p class="botText"><span>' + data + "</span></p>";
+            $("#chatbox").append(botHtml);
+            document
+              .getElementById("userInput")
+              .scrollIntoView({ block: "start", behavior: "smooth" });
+          });
+        }
+        $("#textInput").keypress(function(e) {
+          if (e.which == 13) {
+            getBotResponse();
+          }
+        });
+</script>

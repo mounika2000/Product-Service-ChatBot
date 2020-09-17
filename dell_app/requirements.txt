@@ -1,0 +1,5 @@
+dialogflow==0.7.2
+firebase_admin==3.2.0
+python==3.7.3
+flask==1.1.1
+ngrok==2.3.35
